@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATIONFORM</title>
+</head>
+<body>
+<form id="REGISTRATION">
+        <label for="name">NAME:</label>
+        <input type="TEXT" id="name" name="name" required><br>
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="register">
+</form>
+<div id="AFTERREGISTRATION" style="display: none">
+        <p>REGISTRATION SUCCEEFULL</p>
+</div>
+<script>
+    document.getElementById("REGISTRATION").addEventListener("submit",
+    function(event){
+                  event.preventDefault();
+                  document.getElementById("AFTERREGISTRATION").style.display="block";
+                  document.getElementId("REGISTRATION").reset();
+    });
+</script>
